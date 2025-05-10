@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const VerifierDashboard = () => {
   const [formData, setFormData] = useState([]);
 
-  const apiUrl = 'http://localhost:5000/api/verifier/user';
+  const apiUrl = 'https://creditsea-loan-manager-backend.onrender.com/api/verifier/user';
 
   const fetchData = async () => {
     const res = await fetch(apiUrl);

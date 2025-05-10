@@ -4,7 +4,7 @@ import { Button, Table } from 'react-bootstrap';
 const AdminDashboard = () => {
   const [formData, setFormData] = useState([]);
 
-  const apiUrl = 'http://localhost:5000/api/admin/user';
+  const apiUrl = 'https://creditsea-loan-manager-backend.onrender.com/api/admin/user';
 
   const fetchData = async () => {
     const res = await fetch(apiUrl);

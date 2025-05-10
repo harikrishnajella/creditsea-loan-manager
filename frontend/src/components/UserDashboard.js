@@ -14,7 +14,7 @@ const UserDashboard = () => {
     reason: ''
   });
 
-  const apiUrl = 'http://localhost:5000/api/user';
+  const apiUrl = 'https://creditsea-loan-manager-backend.onrender.com/api/user';
 
   const fetchData = async () => {
     const res = await fetch(apiUrl);
