@@ -11,7 +11,7 @@ exports.getUserData = async (req, res) => {
 
 exports.updateUserStatus = async (req, res) => {
     const { status } = req.body;
-    const { id } = req.params; // assuming you're passing the user ID in the URL
+    const { id } = req.params;
 
     try {
         const updatedUser = await User.findByIdAndUpdate(
@@ -23,7 +23,8 @@ exports.updateUserStatus = async (req, res) => {
         if (!updatedUser) {
             return res.status(404).json({ message: "User not found" });
         }
-        res.status(200).json({ message: "User status updated", updatedUser });
+        const message = status === 'Approved' ? "User Loan Approved Successfully" : "User Loan Rejected"
+        res.status(200).json({ message, updatedUser });
     } catch (error) {
         res.status(500).json({ message: "Server Error", error });
     }

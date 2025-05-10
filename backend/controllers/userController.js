@@ -27,7 +27,7 @@ exports.createUserData = async (req, res) => {
             loanOfficer: officer
         })
         const newCreatedData = await newData.save()
-        res.status(201).json({message: "New Loan Details Added", newCreatedData})
+        res.status(201).json({message: "New Loan Requested Successfully", newCreatedData})
     } catch (error) {
         res.status(500).json(error)
     }
